@@ -2155,7 +2155,9 @@
         />
 
         <!-- Solo activities Start -->
-        <activity android:name="com.android.settings.solo.ButtonSettings" />
+        <activity android:name=".solo.ButtonSettings" />
+        <activity android:name=".notificationlight.NotificationLightSettings" />
+        <activity android:name=".notificationlight.BatteryLightSettings" />
 
         <!-- Solo activities end -->
 

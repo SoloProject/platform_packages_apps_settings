@@ -28,6 +28,8 @@ public abstract class InstrumentedFragment extends PreferenceFragment {
     public static final int ROTATION = 100001;
     public static final int ADVANCED = 100002;
     public static final int BUTTONS = 100003;
+    public static final int NOTIFICATIONLIGHT = 100004;
+    public static final int BATTERYLIGHT = 100005;
 
     /**
      * Declare the view of this category.
