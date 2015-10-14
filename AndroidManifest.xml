@@ -2155,7 +2155,7 @@
         />
 
         <!-- Solo activities Start -->
-        <activity android:name=".solo.ButtonSettings" />
+        <activity android:name="com.android.settings.solo.ButtonSettings" />
 
         <!-- Solo activities end -->
 
