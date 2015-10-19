@@ -28,6 +28,10 @@
             android:key="clock_style_pref"
             android:title="@string/status_bar_clock" />
 
+        <PreferenceScreen
+            android:fragment="com.android.settings.slim.StatusBarBattery"
+            android:key="statusbar_battery"
+            android:title="@string/battery_title"/>
     </PreferenceCategory>
 
     <PreferenceCategory
