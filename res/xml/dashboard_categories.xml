@@ -75,6 +75,7 @@
     <!-- PERSONALIZATION -->
         <dashboard-category
             android:id="@+id/personalization_section"
+            android:key="@string/category_key_solo"
             android:title="@string/header_category_personalization" >
 
        <!-- Bars -->
@@ -108,6 +109,17 @@
                 android:fragment="com.android.settings.notification.NotificationSettings"
                 android:icon="@drawable/ic_settings_notifications"
                 />
+
+         <dashboard-tile
+            android:key="systemuituner"
+            android:title="@string/systemuituner"
+            android:layout="@layout/preference_systemui_tuner"
+            android:icon="@drawable/ic_systemui_tuner" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.TunerActivity" />
+         </dashboard-tile>
 
      </dashboard-category>
 
