@@ -25,10 +25,10 @@
     <string name="enabled">Enabled</string>
     <string name="default_string">Default</string>
     <string name="button_settings_title">Buttons</string>
+    <!-- Slim settings screens -->
     <string name="header_category_personalization">UI settings</string>
     <string name="interface_settings_title">Bars</string>
     <string name="category_key_solo">UI settings</string>
-    <string name="systemuituner">System UI Tuner</string>
     <string name="custom_title">OwlsNest</string>
 
     <!-- Color Picker -->
