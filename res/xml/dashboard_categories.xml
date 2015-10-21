@@ -78,6 +78,13 @@
             android:key="@string/category_key_solo"
             android:title="@string/header_category_personalization" >
 
+       <dashboard-tile
+                android:id="@+id/Owlsnest"
+                android:title="@string/custom_title"
+                android:fragment="com.aosip.owlsnest.Owlsnest"
+                android:icon="@drawable/ic_systemui_tuner"
+                />
+
        <!-- Bars -->
        <dashboard-tile
             android:id="@+id/interface_settings"
@@ -109,17 +116,6 @@
                 android:fragment="com.android.settings.notification.NotificationSettings"
                 android:icon="@drawable/ic_settings_notifications"
                 />
-
-         <dashboard-tile
-            android:key="systemuituner"
-            android:title="@string/systemuituner"
-            android:layout="@layout/preference_systemui_tuner"
-            android:icon="@drawable/ic_systemui_tuner" >
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.TunerActivity" />
-         </dashboard-tile>
 
      </dashboard-category>
 

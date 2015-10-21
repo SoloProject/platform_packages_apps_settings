@@ -29,6 +29,7 @@
     <string name="interface_settings_title">Bars</string>
     <string name="category_key_solo">UI settings</string>
     <string name="systemuituner">System UI Tuner</string>
+    <string name="custom_title">OwlsNest</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -198,6 +199,5 @@
     <string name="navigation_restore_button_text">Restore\ndefaults</string>
     <string name="navigation_edit_button_text">Edit</string>
     <string name="navigation_save_button_text">Save</string>
-    <string name="navigation_bar_reset_message">Delete current settings and restore the default layout?</string>
- 
+    <string name="navigation_bar_reset_message">Delete current settings and restore the default layout?</string> 
 </resources>
