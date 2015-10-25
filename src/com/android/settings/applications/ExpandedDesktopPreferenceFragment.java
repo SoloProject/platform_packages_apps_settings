@@ -94,13 +94,14 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
         mSession.resume();
         mActivityFilter = new ActivityFilter(getActivity().getPackageManager());
 
-        WindowManagerPolicyControl.reloadFromSetting(getActivity(),
-                Settings.Global.POLICY_CONTROL);
+        mExpandedDesktopState = getExpandedDesktopState(getActivity().getContentResolver());
+        if (mExpandedDesktopState == STATE_USER_CONFIGURABLE) {
+            WindowManagerPolicyControl.reloadFromSetting(getActivity(),
+                    Settings.Global.POLICY_CONTROL);
+        }
         mAllPackagesAdapter = new AllPackagesAdapter(getActivity());
 
         mAllPackagesAdapter.notifyDataSetChanged();
-
-        mExpandedDesktopState = getExpandedDesktopState(getActivity().getContentResolver());
 
         setHasOptionsMenu(true);
     }
@@ -170,7 +171,6 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
     private void enableForAll() {
         mExpandedDesktopState = STATE_ENABLE_FOR_ALL;
         writeValue("immersive.full=*");
-        WindowManagerPolicyControl.reloadFromSetting(getActivity());
         mAllPackagesAdapter.notifyDataSetInvalidated();
         hideListView();
     }
@@ -297,7 +297,10 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
     }
 
     private void save() {
-        WindowManagerPolicyControl.saveToSettings(getActivity(), Settings.Global.POLICY_CONTROL);
+        if (mExpandedDesktopState == STATE_USER_CONFIGURABLE) {
+            WindowManagerPolicyControl.saveToSettings(getActivity(),
+                    Settings.Global.POLICY_CONTROL);
+        }
     }
 
     int getStateDrawable(int state) {
