@@ -131,4 +131,7 @@
     <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
     <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
 
+    <!-- Volume keys skip track -->
+    <string name="volbtn_music_controls_title">Playback control</string>
+    <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
 </resources>
